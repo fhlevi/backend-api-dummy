@@ -1,4 +1,4 @@
-# Backend Endpoint Project ExpressJs
+# Project ExpressJs
 
 ## Project setup
 ```
