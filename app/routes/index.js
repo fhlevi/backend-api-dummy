@@ -1,11 +1,10 @@
 var express = require('express');
 let usersRouter = require('./module/users');
-let checkBalanceRouter = require('./module/checkBalance');
-let getProductListRouter = require('./module/getProductList');
+let checkBalanceRouter = require('./module/balance');
+let getProductListRouter = require('./module/product');
 let inquiryRouter = require('./module/inquiry');
 let topupRouter = require('./module/topup');
-let historyTransactionRouter = require('./module/historyTransaction');
-
+let historyTransactionRouter = require('./module/transaction');
 
 /* modules */
 const route = [

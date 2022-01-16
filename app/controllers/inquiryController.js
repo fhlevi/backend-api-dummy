@@ -1,7 +1,4 @@
-var express = require('express');
-var router = express.Router();
-
-router.post('/ppob/get/top-up', function(req, res) {
+exports.topupInquiry = function(req, res) {
     const { authorization } = req.headers
     const { productCode, amount, billNumber } = req.body
 
@@ -49,6 +46,4 @@ router.post('/ppob/get/top-up', function(req, res) {
     }
 
     res.status(data.status).json(data)
-})
-
-module.exports = router
+}

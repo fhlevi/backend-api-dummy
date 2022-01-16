@@ -1,7 +1,4 @@
-var express = require('express');
-var router = express.Router();
-
-router.get('/wallet/history-transaction/:type?', function(req, res) {
+exports.transactionHistory = function(req, res) {
     const { transactionType, startDate, stopDate } = req.query
     const { authorization } = req.headers
     
@@ -95,6 +92,4 @@ router.get('/wallet/history-transaction/:type?', function(req, res) {
     }
 
     res.status(data.status).json(data)
-})
-
-module.exports = router;
+}

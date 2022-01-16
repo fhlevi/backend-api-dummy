@@ -1,7 +1,4 @@
-var express = require('express');
-var router = express.Router();
-
-router.get('/ppob/checkBalance', function(req, res) {
+exports.balance_check = function (req, res) {
     let data = {
         status: 200,
         data: {}
@@ -19,6 +16,4 @@ router.get('/ppob/checkBalance', function(req, res) {
     }
 
     res.status(data.status).json(data.data)
-})
-
-module.exports = router;
+}

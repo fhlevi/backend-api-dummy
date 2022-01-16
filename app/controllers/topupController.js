@@ -1,7 +1,4 @@
-var express = require('express');
-var router = express.Router();
-
-router.post('/ppob/top-up', function(req, res) {
+exports.topupList = function(req, res) {
     const { authorization } = req.headers
     const { 
         productCode, amount, billNumber, transactionID, refNo, pin, puchaseName, 
@@ -60,11 +57,9 @@ router.post('/ppob/top-up', function(req, res) {
     }
 
     res.status(data.status).json(data)
-})
+}
 
 function checkLength(val) {
     const data = String(val)
     return data.length
 }
-
-module.exports = router

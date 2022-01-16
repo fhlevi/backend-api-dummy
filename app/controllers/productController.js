@@ -1,7 +1,4 @@
-var express = require('express');
-var router = express.Router();
-
-router.get('/ppob/get/denom/:code', function(req, res) {
+exports.getProductList = function(req, res) {
     const { authorization } = req.headers
     const { code } = req.params
     let data = {
@@ -78,6 +75,4 @@ router.get('/ppob/get/denom/:code', function(req, res) {
     }
 
     res.status(data.status).json(data)
-});
-
-module.exports = router;
+}
