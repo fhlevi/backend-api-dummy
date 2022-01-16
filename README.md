@@ -1,4 +1,4 @@
-# backend-endpoint
+# Backend Endpoint
 
 ## Project setup
 ```
